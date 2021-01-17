@@ -20,7 +20,7 @@ for env_variable in portainer_env_variables:
 portainer_host = os.environ.get('PORTAINER_HOST') or 'http://10.100.101.201:9000/api'
 portainer_username = os.environ.get('PORTAINER_USERNAME') or 'admin'
 portainer_password = os.environ.get('PORTAINER_PASSWORD') or 'Qazwsx!@#123'
-portainer_stack_name = os.environ.get('PORTAINER_STACK_NAME') or 'click-2-dial'
+portainer_stack_name = os.environ.get('PORTAINER_STACK_NAME') or 'click2dial'
 
 def main():
     portainer_config = portainer_api.Configuration()
