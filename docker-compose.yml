@@ -3,11 +3,12 @@ version: '2'
 services:
 
   web:
-    build: .
+    image: docker.voloshanenko.com/click2dial
     working_dir: /usr/share/nginx/html
     restart: unless-stopped
     environment:
     - VIRTUAL_HOST=${VIRTUAL_HOST}
+    - VIRTUAL_PORT=${VIRTUAL_PORT}
     - LETSENCRYPT_HOST=${LETSENCRYPT_HOST}
     - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
     logging:
