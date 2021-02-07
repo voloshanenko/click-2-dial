@@ -9,4 +9,4 @@ services:
     working_dir: /usr/share/nginx/html
     restart: unless-stopped
     volumes:
-      - src:/usr/share/nginx/html
+      - ./src:/usr/share/nginx/html

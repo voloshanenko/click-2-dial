@@ -1,9 +1,11 @@
 // 4. Create a user agent and connect.
-var inviteButton = document.getElementById('invite');
-var remoteMedia = document.getElementById('remote');
+var inviteButton = document.getElementById('invite-button');
+var remoteMedia = document.getElementById('remote-media');
+
 var ua = new SIP.Web.Simple({
   ua: {
-    traceSip: true
+    traceSip: true,
+    wsServers: ['wss://pbx.voloshanenko.com:8089/ws'],
   },
   media: {
     remote: {
@@ -17,7 +19,7 @@ var session;
 // 5. Send invite on button click.
 inviteButton.addEventListener('click', function () {
   inviteButton.disabled = true;
-  session = ua.call('welcome@onsip.com');
+  session = ua.call('902@pbx.voloshanenko.com');
 
   addListeners();
 }, false);

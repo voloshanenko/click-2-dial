@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-<!-- 1. HTML boilerplate code -->
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <title>My App</title>
+    <link rel="stylesheet" href="onsip.css">
+  </head>
+  <body>
+    <div id="user-agent">
+      <button id="invite-button">Invite Session</button>
+      <audio id="remote-media"></audio>
+    
+      <button id="terminate-button">Terminate</button>
 
-<!-- 2. Let's make our user interface -->
-<button id="invite">Invite Session</button>
-<audio id="remote"></audio>
+      <div id="volume-bar">
+        <input type="range" id="volume-range" min="0" max="100" value="50"/>
+        <button id="mute-button" class="off">Mute</button>
+      </div>
+    </div>
 
-<button id="volume-up">Raise Volume</button>
-<button id="volume-down">Lower Volume</button>
-<button id="mute" class="off">Mute</button>
-
-<!-- 3. Include SIP.js  -->
-<script src="http://sipjs.com/download/sip-0.13.5.js"></script>
-<script src="main.js"></script>
-
-<script>
-  if (window.location.hash === '#dev') {
-    var i = 1;
-    window.setInterval(function () { console.log(i); i++; }, 950);
-    window.setTimeout(function () { window.location.reload(); }, 10000);
-  }
-</script>
-</body>
+    <script src="http://sipjs.com/download/sip-0.13.5.min.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
