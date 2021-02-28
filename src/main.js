@@ -6,6 +6,10 @@ var ua = new SIP.Web.Simple({
   ua: {
     traceSip: true,
     wsServers: ['wss://pbx.voloshanenko.com:8089/ws'],
+    uri: "9999",
+    authorizationUser: "9999",
+    password: "a3df8cfe530b6aaa6bf6b61cac24b9bb",
+    displayName: "ProFFesor Client"
   },
   media: {
     remote: {
@@ -19,7 +23,7 @@ var session;
 // 5. Send invite on button click.
 inviteButton.addEventListener('click', function () {
   inviteButton.disabled = true;
-  session = ua.call('902@pbx.voloshanenko.com');
+  session = ua.call('2000@pbx.voloshanenko.com');
 
   addListeners();
 }, false);
