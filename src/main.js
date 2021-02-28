@@ -6,7 +6,7 @@ var ua = new SIP.Web.Simple({
   ua: {
     traceSip: true,
     wsServers: ['wss://pbx.voloshanenko.com:8089/ws'],
-    uri: "9999",
+    uri: "9999@pbx.voloshanenko.com",
     authorizationUser: "9999",
     password: "a3df8cfe530b6aaa6bf6b61cac24b9bb",
     displayName: "ProFFesor Client"
